@@ -14,7 +14,8 @@ const domain = process.env.PRODUCTION_DOMAIN;
         new ModuleFederationPlugin({
             name: 'container',
             remotes: { 
-                marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`
+                marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
+                auth: 'auth@http://localhost:8082/remoteEntry.js'
             },
             shared: packageJson.dependencies
         })
