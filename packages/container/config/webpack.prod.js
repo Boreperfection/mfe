@@ -16,7 +16,7 @@ const domain = process.env.PRODUCTION_DOMAIN;
             remotes: { 
                 marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
                 auth: `auth@${domain}http://localhost:8082/remoteEntry.js`,
-                dashboard: `dashboard@${domain}@http://localhost:8083/remoteEntry.js`,
+                dashboard: `dashboard@${domain}http://localhost:8083/remoteEntry.js`,
             },
             shared: packageJson.dependencies
         })
